@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MooligAI</title>
+<style>
+body{margin:0;font-family:Arial;background:#f4f8f3;color:#173522}
+header{background:#176b3a;color:white;padding:25px 18px;border-radius:0 0 25px 25px}
+h1{margin:0}.tag{font-size:13px}
+main{padding:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:white;padding:18px;border-radius:18px;box-shadow:0 3px 10px #0001}
+.icon{font-size:28px}.card b{display:block;margin-top:8px}
+.screen{display:none}.active{display:block}
+.back{color:#176b3a;font-weight:bold;margin-bottom:15px}
+.box{background:#eaf5ec;padding:18px;border-radius:18px}
+button{background:#176b3a;color:white;border:0;padding:11px 15px;border-radius:10px}
+.item{background:white;padding:15px;border-radius:14px;margin:10px 0}
+nav{position:fixed;bottom:0;background:white;width:100%;padding:12px;text-align:center}
+nav button{margin:3px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌿 MooligAI</h1>
+<div class="tag">Herbal Knowledge • Health • Marketplace</div>
+</header>
+
+<main>
+
+<div id="home" class="screen active">
+<h2>Vanakkam! 👋</h2>
+<p>Discover the power of traditional herbal knowledge.</p>
+
+<div class="grid">
+<div class="card" onclick="show('identify')">
+<div class="icon">📷</div><b>AI Plant Identification</b>
+</div>
+
+<div class="card" onclick="show('siddha')">
+<div class="icon">🌿</div><b>Siddha + IKS</b>
+</div>
+
+<div class="card" onclick="show('doctor')">
+<div class="icon">👨‍⚕️</div><b>Siddha Doctor</b>
+</div>
+
+<div class="card" onclick="show('nearby')">
+<div class="icon">📍</div><b>Nearby Plants</b>
+</div>
+
+<div class="card" onclick="show('market')">
+<div class="icon">🛒</div><b>Herbal E-Commerce</b>
+</div>
+
+<div class="card" onclick="show('cosmetics')">
+<div class="icon">✨</div><b>Herbal Cosmetics</b>
+</div>
+
+<div class="card" onclick="show('diet')">
+<div class="icon">🥗</div><b>Siddha Diet Foods</b>
+</div>
+
+<div class="card" onclick="show('elders')">
+<div class="icon">👵</div><b>Paati & Thaatha</b>
+</div>
+</div>
+
+<h2>🌱 Featured Plants</h2>
+<div class="item">🌿 <b>Tulsi</b> – Ocimum tenuiflorum</div>
+<div class="item">🍃 <b>Neem</b> – Azadirachta indica</div>
+<div class="item">🌺 <b>Hibiscus</b> – Hibiscus rosa-sinensis</div>
+<div class="item">🟡 <b>Turmeric</b> – Curcuma longa</div>
+</div>
+
+
+<div id="identify" class="screen">
+<div class="back" onclick="show('home')">← Home</div>
+<div class="box">
+<h2>📷 AI Plant Identification</h2>
+<p>Upload a plant image to identify medicinal plants.</p>
+<input type="file" accept="image/*">
+<br><br><button>Analyze Plant</button>
+</div>
+</div>
+
+
+<div id="siddha" class="screen">
+<div class="back" onclick="show('home')">← Home</div>
+<div class="box">
+<h2>🌿 Siddha + IKS Knowledge</h2>
+<p>Traditional knowledge with references and safety guidance.</p>
+</div>
+<div class="item">🌿 Nilavembu</div>
+<div class="item">🍃 Adathodai</div>
+<div class="item">🌱 Thoothuvalai</div>
+<div class="item">📚 Book / Scriptural References</div>
+</div>
+
+
+<div id="doctor" class="screen">
+<div class="back" onclick="show('home')">← Home</div>
+<div class="box">
+<h2>👨‍⚕️ Siddha Doctor Consultancy</h2>
+<p>Connect with qualified Siddha practitioners.</p>
+<button>Consult Doctor</button>
+</div>
+</div>
+
+
+<div id="nearby" class="screen">
+<div class="back" onclick="show('home')">← Home</div>
+<div class="box">
+<h2>📍 Nearby Plant Availability</h2>
+<p>Find medicinal plants and local sellers.</p>
+<button>Find Nearby</button>
+</div>
+</div>
+
+
+<div id="market" class="screen">
+<div class="back" onclick="show('home')">← Home</div>
+<h2>🛒 Herbal Marketplace</h2>
+<div class="item">🌿 Fresh Tulsi Plant – ₹80 <button>Add</button></div>
+<div class="item">🌱 Medicinal Plant Seeds – ₹60 <button>Add</button></div>
+<div class="item">🍃 Dried Herbal Bundle – ₹150 <button>Add</button></div>
+</div>
+
+
+<div id="cosmetics" class="screen">
+<div class="back" onclick="show('home')">← Home</div>
+<h2>✨ Herbal Cosmetics</h2>
+<div class="item">Herbal Hair Oil – ₹220 <button>Buy</button></div>
+<div class="item">Herbal Face Pack – ₹180 <button>Buy</button></div>
+</div>
+
+
+<div id="diet" class="screen">
+<div class="back" onclick="show('home')">← Home</div>
+<h2>🥗 Siddha Diet Foods</h2>
+<div class="item">Millet Health Mix – ₹180 <button>Order</button></div>
+<div class="item">Herbal Soup Mix – ₹120 <button>Order</button></div>
+</div>
+
+
+<div id="elders" class="screen">
+<div class="back" onclick="show('home')">← Home</div>
+<div class="box">
+<h2>👵 Paati & Thaatha Knowledge</h2>
+<p>Record traditional herbal knowledge.</p>
+<textarea rows="5" style="width:100%" placeholder="Enter knowledge..."></textarea>
+<br><br>
+<input type="file" accept="audio/*,video/*">
+<br><br>
+<button>Submit Knowledge</button>
+</div>
+</div>
+
+</main>
+
+<nav>
+<button onclick="show('home')">🏠 Home</button>
+<button onclick="show('identify')">📷 Identify</button>
+<button onclick="show('market')">🛒 Market</button>
+<button onclick="show('doctor')">👨‍⚕️ Doctor</button>
+</nav>
+
+<script>
+function show(id){
+document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+                                                 </html>
